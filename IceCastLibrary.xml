@@ -1,0 +1,364 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IceCastLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:IceCastLibrary.IceCastClient">
+            <summary>
+            Сласс для работы с сервером IceCast
+            </summary>
+        </member>
+        <member name="M:IceCastLibrary.IceCastClient.SetDescription(System.String)">
+            <summary>
+            Установить параметр описания
+            </summary>
+            <param name="description">Текст описания радиостанции</param>
+        </member>
+        <member name="M:IceCastLibrary.IceCastClient.SetPort(System.Int32)">
+            <summary>
+            Установка порта соединения
+            </summary>
+            <param name="port"></param>
+        </member>
+        <member name="M:IceCastLibrary.IceCastClient.GetGenre">
+            <summary>
+            Получить жанр
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceCastLibrary.IceCastClient.SetGanre(System.String)">
+            <summary>
+            Установка жанра
+            </summary>
+            <param name="ganre"></param>
+        </member>
+        <member name="M:IceCastLibrary.IceCastClient.#ctor(System.String,System.Int32,System.String,System.String,IceCastLibrary.FormatTypes)">
+            <summary>
+            Создаём экземпляр клиента
+            </summary>
+            <param name="host">адрес сервера</param>
+            <param name="port">порт сервера</param>
+            <param name="pass">пароль для доступа</param>
+            <param name="stationName">наименование станции</param>
+            <param name="Format">Формат файлов для стриминга. По умолчанию OGG</param>
+        </member>
+        <member name="M:IceCastLibrary.IceCastClient.SetPlaylist(System.Collections.Generic.List{System.String})">
+            <summary>
+            Передача библиотеке списка песен для воспроизведения
+            </summary>
+            <param name="files"></param>
+        </member>
+        <member name="M:IceCastLibrary.IceCastClient.AddSong(System.String)">
+            <summary>
+            Add song to playlist
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:IceCastLibrary.IceCastClient.PlaySong(System.Int32)">
+            <summary>
+            Playing song from playlist
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:IceCastLibrary.IceCastClient.GetCurrentSongName">
+            <summary>
+            Получить имя текущей песни
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceCastLibrary.IceCastClient.PlayNext">
+            <summary>
+            Start playing next song from playlist
+            </summary>
+        </member>
+        <member name="M:IceCastLibrary.IceCastClient.PlayPrevious">
+            <summary>
+            Start playing previous song from playlist
+            </summary>
+        </member>
+        <member name="M:IceCastLibrary.IceCastClient.SetMount(System.String)">
+            <summary>
+            Если вы хотите, чтобы адрес вашей трансляции отличался от /live
+            </summary>
+            <param name="mount"></param>
+        </member>
+        <member name="M:IceCastLibrary.IceCastClient.SetFormat(IceCastLibrary.FormatTypes)">
+            <summary>
+            Установка нового формата стриминга
+            </summary>
+            <param name="Format"></param>
+        </member>
+        <member name="M:IceCastLibrary.IceCastClient.Open">
+            <summary>
+            Попытка открыть подключение
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceCastLibrary.IceCastClient.GetLastError">
+            <summary>
+            Получение текста последней ошибки
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceCastLibrary.IceCastClient.GetIceCastError">
+            <summary>
+            Получение текста ошибки от класса более низкого уровня
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceCastLibrary.IceCastClient.PlaySong(System.String)">
+            <summary>
+            Начало проигрывания файла
+            </summary>
+            <param name="fileName">путь до файла, который необходимо отправить на сервер</param>
+        </member>
+        <member name="M:IceCastLibrary.IceCastClient.Close">
+            <summary>
+            Закрыть соединение
+            </summary>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.open">
+            <summary>
+            Открыть соединение к IceCast. Все параметры УЖЕ должны быть установлены
+            </summary>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.close">
+            <summary>
+            закрыть соединение
+            </summary>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.getVersion">
+            <summary>
+            получить версию
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.setHost(System.String)">
+            <summary>
+            Get Icecast host
+            </summary>
+            <param name="host">Icecast host</param>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.getHost">
+            <summary>
+            Получить Icecast host        
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.setProtocol(System.Int32)">
+            <summary>
+            Set Icecast protocol
+            </summary>
+            <param name="protocol"></param>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.getProtocol">
+            <summary>
+            Get Icecast protocol
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.setPort(System.Int32)">
+            <summary>
+            Set Icecast port
+            </summary>
+            <param name="port">Icecast port</param>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.getPort">
+            <summary>
+            Get Icecast port
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.setPassword(System.String)">
+            <summary>
+            Set Icecast password
+            </summary>
+            <param name="password">password</param>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.getPassword">
+            <summary>
+            Get Icecast password
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.setMount(System.String)">
+            <summary>
+            Назначить точку монтирования
+            </summary>
+            <param name="mount">точка монтирования</param>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.getMount">
+            <summary>
+            Получить точку монтирования
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.setFormat(System.Int32)">
+            <summary>
+            Установить параметр формата
+            </summary>
+            <param name="format">формат</param>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.getFormat">
+            <summary>
+            Получить параметр формата
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.send(System.Byte[],System.Int32)">
+            <summary>
+            Отправить данные на IceCast, парсинг для синхронизации информации 
+            </summary>
+            <param name="data"></param>
+            <param name="length"></param>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.setName(System.String)">
+            <summary>
+            Установить параметр имя
+            </summary>
+            <param name="name">имя</param>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.getName">
+            <summary>
+            Получить параметр имя
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.setUrl(System.String)">
+            <summary>
+            Установить параметр Url
+            </summary>
+            <param name="url"></param>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.getUrl">
+            <summary>
+            Получить параметр Url
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.setGenre(System.String)">
+            <summary>
+            Установить параметр Жанр
+            </summary>
+            <param name="genre">название жанра</param>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.getGenre">
+            <summary>
+            Получить параметр Жанр
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.setUser(System.String)">
+            <summary>
+            Установить Icecast пользователя
+            </summary>
+            <param name="username"></param>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.getUser">
+            <summary>
+            Получить Icecast пользователя
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.setAgent(System.String)">
+            <summary>
+            Установить Icecast agent
+            </summary>
+            <param name="agent"></param>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.getAgent">
+            <summary>
+            Получить Icecast agent
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.setDescription(System.String)">
+            <summary>
+            Установить Параметр Описание
+            </summary>
+            <param name="description"></param>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.getDescription">
+            <summary>
+            Получить Параметр Описание
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.setDumpfile(System.String)">
+            <summary>
+            Назначить Дамп-файл
+            </summary>
+            <param name="dumpfile"></param>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.getDumpfile">
+            <summary>
+            Получить Дамп-файл
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.setInfo(System.String,System.String)">
+            <summary>
+            Назначить параметр Info
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.getInfo(System.String)">
+            <summary>
+            Получить параметр Info
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.setMeta(System.String,System.String)">
+            <summary>
+            Установить параметр MP3-мета
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.isConnected">
+            <summary>
+            Подключение к Icecast установлено ?
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.setPublic(System.Boolean)">
+            <summary>
+            Установить параметр public
+            </summary>
+            <param name="isPublic"></param>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.isPublic">
+            <summary>
+            Получить параметр public
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.setNonBlocking(System.Boolean)">
+            <summary>
+            Установка Icecast в неблокирующей режим. Должен быть установлен перед открытым
+            </summary>
+            <param name="isNonBlocking"></param>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.isNonBlocking">
+            <summary>
+            Icecast установлен в не блокировки режиме ?
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.getQueueLen">
+            <summary>
+            Количество байт, в настоящее время на очереди записи (имеет смысл только в неблокирующем режиме)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IceCastLibrary.Libshout.getDelay">
+            <summary>
+            Получить значение задержки в миллисекундах перед след. отправкй пакета
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
